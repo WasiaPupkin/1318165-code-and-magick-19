@@ -10,6 +10,7 @@ var similarListElement = userDialog.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template')
   .content
   .querySelector('.setup-similar-item');
+var WIZARDS_NUM = 4;
 
 var showSetupBlock = function () {
   userDialog.classList.remove('hidden');
@@ -28,7 +29,7 @@ var generateEyesColor = function () {
 };
 
 var generateWizards = function () {
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < WIZARDS_NUM; i++) {
     wizards.push({
       name: generateName(),
       coatColor: generateCoatColor(),
