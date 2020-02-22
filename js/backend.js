@@ -31,14 +31,14 @@ window.backend = (function () {
     return xhr;
   };
 
-  var _load = function (onLoad, onError) {
+  var _loadSimilar = function (onLoad, onError) {
     var xhr = _createXHR(onLoad, onError);
 
     xhr.open('GET', GET_URL);
     xhr.send();
   };
 
-  var _save = function (data, onLoad, onError) {
+  var _savePlayerWizard = function (data, onLoad, onError) {
     var xhr = _createXHR(onLoad, onError);
 
     xhr.open('POST', SAVE_URL);
@@ -46,8 +46,8 @@ window.backend = (function () {
   };
 
   return {
-    load: _load,
-    save: _save
+    loadSimilar: _loadSimilar,
+    savePlayerWizard: _savePlayerWizard
   };
 
 })();
